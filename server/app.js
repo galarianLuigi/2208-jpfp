@@ -9,7 +9,11 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use(cors());
 app.use(volleyball);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //this is where some things should go
+
+app.use('/api', require('./api'));
 
 module.exports = app;

@@ -1,18 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { CampusesList, StudentsList } from './';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { CampusesList, StudentsList } from './components';
 
 function App() {
   return (
-    <BrowserRouter>
-      <>
-        <div>Test Your App</div>
-      </>
+    <div>
+      <div>Test Your App</div>
+
+      <nav>
+        <Link to='/students'>All Students</Link>
+        <Link to='/campuses'>All Campuses</Link>
+      </nav>
+
       <Routes>
-        <Route path='/campuses' elements={<CampusesList />} />
-        <Route path='/students' elements={<StudentsList />} />
+        <Route path='/campuses' element={<CampusesList />} />
+        <Route path='/students' element={<StudentsList />} />
       </Routes>
-    </BrowserRouter>
+    </div>
   );
 }
 

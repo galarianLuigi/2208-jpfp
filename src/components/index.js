@@ -1,4 +1,4 @@
-import CampusesList from './campusesList';
-import StudentsList from './studentsList';
+import CampusesList from './CampusesList';
+import StudentsList from './StudentsList';
 
-export default { StudentsList, CampusesList };
+export { StudentsList, CampusesList };
